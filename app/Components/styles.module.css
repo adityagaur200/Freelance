@@ -1,0 +1,67 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+  gap: 20px; /* Space between boxes */
+  padding: 20px;
+  max-width: 1200px; /* Limits width on large screens */
+  margin: 0 auto; /* Centers the grid */
+}
+
+.testimonialbox {
+  width: 100%; /* Full width within grid cell */
+  max-width: 500px; /* Caps width for readability */
+  min-height: 150px; /* Minimum height for consistency */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out text and author */
+  text-align: center;
+  overflow: hidden; /* Contain text within the box */
+  word-wrap: break-word; /* Break long words */
+  box-sizing: border-box; /* Include padding/border in width */
+}
+
+/* Text styling */
+.testimonialtext {
+  font-size: 14px;
+  font-style: italic;
+  margin: 0; /* Remove default margins */
+  padding: 0 10px; /* Add horizontal padding for better fit */
+  flex-grow: 1; /* Allow text to take available space */
+  overflow-wrap: break-word; /* Ensure text wraps properly */
+}
+
+.testimonialauthor {
+  font-weight: bold;
+  font-size: 12px; /* Smaller for fit */
+  margin-top: 10px;
+  text-align: right;
+  padding: 0 10px; /* Match text padding */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    padding: 10px;
+  }
+  .testimonialbox {
+    max-width: 100%; /* Full width on mobile */
+  }
+  .testimonialtext {
+    font-size: 16px; /* Larger for mobile readability */
+  }
+  .testimonialauthor {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  }
+}
