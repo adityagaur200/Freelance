@@ -2,8 +2,8 @@ import Footer from "./Components/Footer";
 import MyNavbar from "./Components/MyNavbar";
 
 export const metadata = {
-  title: "Next.js with Bootstrap Navbar",
-  description: "Responsive navbar with Bootstrap in Next.js",
+  title: "Ramanujan Academic Institute",
+  description: "Educational Institute",
 };
 
 export default function RootLayout({ children }) {
